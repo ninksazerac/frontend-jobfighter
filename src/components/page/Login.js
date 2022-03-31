@@ -56,7 +56,7 @@ export default function Login(){
                 justifyContent="center">
 
                 <Box id="form-write" onSubmit={handleSubmit} noValidate sx={{ mt: 1 ,maxWidth: '70%',marginTop:5}}>
-            <TextField
+            <TextField className="e-mail"
               margin="normal"
               required
               fullWidth
@@ -66,12 +66,12 @@ export default function Login(){
               autoComplete="email"
               autoFocus
             />
-            <TextField
+            <TextField className="password"
               margin="normal"
               required
               fullWidth
               name="password"
-              label="รหัสผ่าน"
+              label="Password"
               type="password"
               id="password"
               autoComplete="current-password"
