@@ -14,18 +14,11 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-
-import './Login.css';
+import './Forgotpass.css';
 
 
 
 export default function Login(){
-
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -34,7 +27,6 @@ export default function Login(){
           password: data.get('password'),
         });
       };
-      
     return(
         // ลองใช้ mui
         <Grid id="layout">
@@ -63,10 +55,13 @@ export default function Login(){
                 alignItems="center"
                 justifyContent="center">
 
-                <Box id="form-write" onSubmit={handleSubmit} noValidate sx={{ mt: 1 ,width: 450,marginTop:5}}>
+                <Box id="form-write" onSubmit={handleSubmit} noValidate sx={{ mt: 1 ,width: 450,marginTop:4}}>
+            <div className="detail-forgot" >
+                <h3>กรุณากรอกอีเมลที่คุณลงทะเบียนไว้</h3>
+                <h3>ระบบจะส่งลิงก์ไปยังอีเมลเพื่อให้คุณตั้งรหัสผ่านใหม่</h3>
+            </div>
             <TextField className="e-mail"
               margin="normal"
-              // ดอกจัน
               // required
               fullWidth
               id="email"
@@ -74,31 +69,8 @@ export default function Login(){
               name="email"
               autoComplete="email"
               autoFocus
-              variant="outlined"
             />
-            <TextField className="password"
-              margin="normal"
-              // ดอกจัน
-              // required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              sx={{ mt: 5}}
-              variant="outlined"
-            />
-            {/* <InputAdornment position="end">
-            <IconButton
-              aria-label="toggle password visibility"
-              onClick={handleClickShowPassword}
-              onMouseDown={handleMouseDownPassword}
-              edge="end"
-            >
-              {values.showPassword ? <VisibilityOff /> : <Visibility />}
-            </IconButton>
-          </InputAdornment> */}
+            
             <Button id="button-login"
             style={{
                 borderRadius: 20,
@@ -112,33 +84,15 @@ export default function Login(){
               sx={{ mt: 4, mb: 2 ,color: 'white'}}
             >
             <div className="button-login">
-            เข้าสู่ระบบ
+            ส่ง
             </div>
             </Button>
 
 
-            {/* link 2 อันล่าง */}
-            <Grid container justifyContent="flex-end" alignItems="flex-end">
-              <Grid item >
-                <Link href="#" style={{fontSize: "18px",color: "black"}} variant="body2" underline="hover">
-                  <div className="forgot-pass">
-                  ลืมรหัสผ่าน?    
-                  </div>
-                </Link>
-              </Grid>
-            </Grid>
-            <Grid container justifyContent="flex-end" alignItems="flex-end">
-              <Grid item>
-                <Link href="#" style={{fontSize: "18px",color: "black"}} variant="body2" underline="hover">
-                  <div className="sign-up-user">
-                  ลงทะเบียนสำหรับผู้ใช้ใหม่    
-                  </div>
-                </Link>
-              </Grid>
-            </Grid>
+            
           </Box>
           </Grid>
-            </Box>
+          </Box>
 
 
             {/* หัวข้อแถบเขียน */}
@@ -153,9 +107,9 @@ export default function Login(){
                 borderTopLeftRadius: '20px',
                 borderTopRightRadius: '20px'
             }}>
-                <div className="head-login">
+                <div className="head-forgot-pass">
                     
-                    <h1>เข้าสู่ระบบ</h1>
+                    <h1>ลืมรหัสผ่าน</h1>
                     
                 </div>   
             </Box>
