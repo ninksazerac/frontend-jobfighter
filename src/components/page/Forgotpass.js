@@ -14,6 +14,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
+import logo from './pics/Lovepik_com-401693242-office-girl.png'
 import './Forgotpass.css';
 
 
@@ -30,8 +31,19 @@ export default function Login(){
     return(
         // ลองใช้ mui
         <Grid id="layout">
+
+          <Grid className="image">
+            <Box className="image"
+            component={"img"}
+            src={logo}
+            sx={{
+              mt:15
+            }}
+            />
+          </Grid>
+          
             {/* ฟอร์มแถบขาว */}
-            <Box id="white-form"
+            <Box className="white-form"
             sx={{
                 width: 600,
                 height: 450,
