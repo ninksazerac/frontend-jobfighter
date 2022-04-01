@@ -1,26 +1,22 @@
 import React from "react";
 import Box from '@mui/material/Box';
-import { Grid } from "@mui/material";
+import { Grid, Icon } from "@mui/material";
 import Paper from '@mui/material/Paper';
 import { Rectangle } from "@mui/icons-material";
 import {
     BrowserRouter,
     Routes,
     Route,
+    Link,
   } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Container from '@mui/material/Container';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import logo from './pics/Lovepik_com-401693242-office-girl.png'
-import './Login.css';
+import { Stack } from "@mui/material";
+import { styled } from '@mui/material/styles';
+import PersonIcon from '@mui/icons-material/Person';
+import BusinessIcon from '@mui/icons-material/Business';
+import logo from './pics/—Pngtree—glasses man sending message and_5478887.png'
+import './Signup-company.css';
 
 
 
@@ -34,27 +30,31 @@ export default function Login(){
           password: data.get('password'),
         });
       };
+      const Item = styled(Paper)(({ theme }) => ({
+        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+        ...theme.typography.body2,
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+      }));
 
     return(
         // ลองใช้ mui
+        
         <Grid className="layout">
-
+            {/* รูปฝั่งซ้าย */}
           <Grid className="image">
             <Box className="image"
             component={"img"}
             src={logo}
-            sx={{
-              mt:15
-            }}
             />
           </Grid>
-
             {/* ฟอร์มแถบขาว */}
             <Box id="white-form"
             sx={{
                 width: 600,
                 height: 450,
-                my: 25,
+                my: 30,
                 mx: 95,
                 backgroundColor: 'white',
                 // display: 'flex',
@@ -74,7 +74,7 @@ export default function Login(){
                 alignItems="center"
                 justifyContent="center">
 
-                <Box id="form-write" onSubmit={handleSubmit} noValidate sx={{ mt: 1 ,width: 450,marginTop:5}}>
+            <Box id="form-write" onSubmit={handleSubmit} noValidate sx={{ mt: 2 ,width: 450}}>
             <TextField className="e-mail"
               margin="normal"
               // ดอกจัน
@@ -87,6 +87,18 @@ export default function Login(){
               autoFocus
               variant="outlined"
             />
+            <TextField className="cfe-mail"
+              margin="normal"
+              // ดอกจัน
+              // required
+              fullWidth
+              id="cfemail"
+              label="Confirm E-mail"
+              name="cfemail"
+              autoComplete="email"
+              sx={{ mt: 2}}
+              variant="outlined"
+            />
             <TextField className="password"
               margin="normal"
               // ดอกจัน
@@ -97,74 +109,94 @@ export default function Login(){
               type="password"
               id="password"
               autoComplete="current-password"
-              sx={{ mt: 5}}
+              sx={{ mt: 2}}
+              variant="outlined"
+            />
+            <TextField className="cfpassword"
+              margin="normal"
+              // ดอกจัน
+              // required
+              fullWidth
+              name="cfpassword"
+              label="Confirm Password"
+              type="password"
+              id="cfpassword"
+              autoComplete="current-password"
+              sx={{ mt: 2}}
               variant="outlined"
             />
 
-            <Button id="button-login"
+            <Button className="button-login"
             style={{
                 borderRadius: 20,
                 backgroundColor: "#24AB82",
                 padding: "10px 36px",
-                fontSize: "18px"
+                fontSize: "18px",
+                boxShadow: 20
             }}
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 4, mb: 2 ,color: 'white'}}
+              sx={{ mt: 2, mb: 2 ,color: 'white'}}
             >
-            <div className="button-login">
-            เข้าสู่ระบบ
+            <div className="button-signup">
+            สมัครสมาชิก
             </div>
             </Button>
-
-
-            {/* link 2 อันล่าง */}
-            <Grid container justifyContent="flex-end" alignItems="flex-end">
-              <Grid item >
-                <Link href="/forgotpass" style={{fontSize: "18px",color: "black"}} variant="body2" underline="hover">
-                  <div className="forgot-pass">
-                  ลืมรหัสผ่าน?    
-                  </div>
-                </Link>
-              </Grid>
-            </Grid>
-            <Grid container justifyContent="flex-end" alignItems="flex-end">
-              <Grid item>
-                <Link href="/signupuser" style={{fontSize: "18px",color: "black"}} variant="body2" underline="hover">
-                  <div className="sign-up-user">
-                  ลงทะเบียนสำหรับผู้ใช้ใหม่    
-                  </div>
-                </Link>
-              </Grid>
-            </Grid>
           </Box>
           </Grid>
-            </Box>
+          </Box>
 
-
-            {/* หัวข้อแถบเขียน */}
-            
-            <Box id="green-form"
+            <Grid>
+            {/* หัวข้อแถบเขียว */}
+            <Box className="green"
             sx={{
                 width: 600,
                 height: 120,
-                my: -96,
+                my: -101,
                 mx: 95,
                 backgroundColor : '#69F0AE',
-                borderTopLeftRadius: '20px',
+                
                 borderTopRightRadius: '20px'
             }}>
-                <div className="head-login">
-                    
-                    <h1>เข้าสู่ระบบ</h1>
-                    
-                </div>   
+              <div className="head-signup"> 
+                    <h1>ลงทะเบียนสำหรับบริษัท</h1>
+                </div>
+                
+
+          <Link to="/signupuser">
+          <div button className="buttonuser1">
+          
+          <div className="icon-user">
+            <PersonIcon fontSize='large'/>
+            </div>
+          <div className="user">
+          นักศึกษา
+          </div>
+            </div>
+          </Link>
+
+          <Link to="/signupcompany">
+          <div button className="buttoncompany1">
+          <div className="icon-company">
+            <BusinessIcon fontSize='large'/>
+            </div>
+          <div className="company">
+          บริษัท
+          </div>
+            </div>
+          </Link>
+
             </Box>
+            </Grid>
+            
+
+              
             
 
             
         </Grid>
+        
     );
     
 }

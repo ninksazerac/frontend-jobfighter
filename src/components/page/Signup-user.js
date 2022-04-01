@@ -7,6 +7,7 @@ import {
     BrowserRouter,
     Routes,
     Route,
+    Link,
   } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -41,13 +42,12 @@ export default function Login(){
         // ลองใช้ mui
         
         <Grid className="layout">
+          {/* รูปฝั่งซ้าย */}
           <Grid className="image">
             <Box className="image"
             component={"img"}
             src={logo}
             />
-
-            
           </Grid>
             {/* ฟอร์มแถบขาว */}
             <Box id="white-form"
@@ -96,7 +96,6 @@ export default function Login(){
               label="Confirm E-mail"
               name="cfemail"
               autoComplete="email"
-              autoFocus
               sx={{ mt: 2}}
               variant="outlined"
             />
@@ -132,7 +131,8 @@ export default function Login(){
                 borderRadius: 20,
                 backgroundColor: "#24AB82",
                 padding: "10px 36px",
-                fontSize: "18px"
+                fontSize: "18px",
+                boxShadow: 20
             }}
               type="submit"
               fullWidth
@@ -165,43 +165,29 @@ export default function Login(){
                 <div className="head-signup2"> 
                     <h1>นักศึกษาจบใหม่</h1> 
                 </div>
+          <Link to="/signupuser">
+          <div button className="buttonuser">
           
-          <Button className="buttonuser"
-          variant="contained"
-          sx={{
-          visibility: 'visible',
-          borderTopLeftRadius: 20,
-          borderTopRightRadius:20,
-          borderBottom:0,
-          boxShadow:0,
-          inlineSize:0
-          }}>
           <div className="icon-user">
             <PersonIcon fontSize='large'/>
             </div>
           <div className="user">
           นักศึกษา
           </div>
-            </Button>
-          
-          <Button className="buttoncompany"
-          variant="contained"
-          sx={{
-          visibility: 'visible',
-          borderTopLeftRadius: 20,
-          borderTopRightRadius:20,
-          borderBottom:0,
-          boxShadow:0,
-          inlineSize:0
-          }}>
+            </div>
+          </Link>
+
+          <Link to="/signupcompany">
+          <div button className="buttoncompany">
           <div className="icon-company">
             <BusinessIcon fontSize='large'/>
             </div>
           <div className="company">
           บริษัท
           </div>
-            </Button>
-          
+            </div>
+          </Link>
+
             </Box>
             </Grid>
             
