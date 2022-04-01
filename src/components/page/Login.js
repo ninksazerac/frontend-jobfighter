@@ -19,7 +19,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-
+import logo from './pics/Lovepik_com-401693242-office-girl.png'
 import './Login.css';
 
 
@@ -37,7 +37,18 @@ export default function Login(){
 
     return(
         // ลองใช้ mui
-        <Grid id="layout">
+        <Grid className="layout">
+
+          <Grid className="image">
+            <Box className="image"
+            component={"img"}
+            src={logo}
+            sx={{
+              mt:15
+            }}
+            />
+          </Grid>
+
             {/* ฟอร์มแถบขาว */}
             <Box id="white-form"
             sx={{
