@@ -34,7 +34,7 @@ export default function Login(){
           password: data.get('password'),
         });
       };
-      
+
     return(
         // ลองใช้ mui
         <Grid id="layout">
@@ -89,16 +89,7 @@ export default function Login(){
               sx={{ mt: 5}}
               variant="outlined"
             />
-            {/* <InputAdornment position="end">
-            <IconButton
-              aria-label="toggle password visibility"
-              onClick={handleClickShowPassword}
-              onMouseDown={handleMouseDownPassword}
-              edge="end"
-            >
-              {values.showPassword ? <VisibilityOff /> : <Visibility />}
-            </IconButton>
-          </InputAdornment> */}
+
             <Button id="button-login"
             style={{
                 borderRadius: 20,
