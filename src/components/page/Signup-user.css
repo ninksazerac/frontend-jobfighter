@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@500&display=swap');
+/* thai */
+@font-face {
+    font-family: 'Noto Sans Thai1';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/notosansthai/v14/iJWQBXeUZi_OHPqn4wq6hQ2_hbJ1xyN9wd43SofNWcdfKI2h.woff2) format('woff2');
+    unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC, U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+/* thai */
+@font-face {
+    font-family: 'Noto Sans Thai2';
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/notosansthai/v14/iJWQBXeUZi_OHPqn4wq6hQ2_hbJ1xyN9wd43SofNWcdfKI2h.woff2) format('woff2');
+    unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC, U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+.head-signup1{
+    font-family: "Noto Sans Thai2";
+    font-size:22px;
+    position: absolute;
+    right: 305px;
+    top: 100px;
+}
+.head-signup2{
+    font-family: "Noto Sans Thai2";
+    font-size:22px;
+    position: absolute;
+    right: 325px;
+    top: 150px;
+}
+.button-signup{
+    font-family: "Noto Sans Thai1";
+    font-size:28px;
+}
+
+/* นักศึกษา */
+.buttonuser{
+    width: 200px;
+    height: 80px;
+    position:absolute;
+    right: 568px;
+    top: 44px;
+    background-color: #69F0AE;
+    box-shadow: 0;
+}
+.buttonuser:hover{
+    /* background-color: #2bbd7e; */
+    background-color: #69F0AE;
+    box-shadow: 0;
+}
+.user{
+    font-family: "Noto Sans Thai1";
+    font-size: 28px;
+    color: black;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+.icon-user{
+    position: absolute;
+    left: 30px;
+    top: 24px;
+    color: #005005;
+    /* color: black; */
+}
+
+/* บริษัท */
+.buttoncompany{
+    width: 200px;
+    height: 80px;
+    position:absolute;
+    right: 350px;
+    top: 44px;
+    background-color: #69F0AE;
+    box-shadow: 0;
+    opacity:0.5;
+}
+.buttoncompany:hover{
+    /* background-color: #2bbd7e; */
+    background-color: #69F0AE;
+    box-shadow: 10;
+    opacity:1;
+}
+.company{
+    font-family: "Noto Sans Thai1";
+    font-size: 28px;
+    color: black;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+.icon-company{
+    position: absolute;
+    left: 45px;
+    top: 24px;
+    color: #005005;
+    /* color: black; */
+}
+
+
+.image{
+    width: 600px;
+    position: absolute;
+    left: 30px;
+    top: 50px;
+}

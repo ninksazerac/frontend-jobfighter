@@ -10,6 +10,7 @@ import {
 import './index.css'
 import Login from "./components/page/Login";
 import Forgotpass from "./components/page/Forgotpass";
+import Signupuser from "./components/page/Signup-user";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -21,6 +22,7 @@ ReactDOM.render(
           {/* <Route path="/" element={<App />} /> */}
           <Route path="/" element={<Login />} />
           <Route path="/forgotpass" element={<Forgotpass />} />
+          <Route path="/signupuser" element={<Signupuser />} />
         </Routes>
   </BrowserRouter>,
   document.getElementById('root')
