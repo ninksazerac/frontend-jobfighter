@@ -21,6 +21,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import logo from './pics/Lovepik_com-401693242-office-girl.png'
 import './Login.css';
+import { useMediaQuery } from 'react-responsive';
 
 
 
@@ -50,7 +51,8 @@ export default function Login(){
           </Grid>
 
             {/* ฟอร์มแถบขาว */}
-            <Box id="white-form"
+            <Grid className="form1">
+            <Box className="box-form"
             sx={{
                 width: 600,
                 height: 450,
@@ -68,7 +70,7 @@ export default function Login(){
 
 
             {/* จัดรูปแบบที่จะกรอก */}
-            <Grid id="form" container
+            <Grid className="form" container
                 spacing={0}
                 direction="column"
                 alignItems="center"
@@ -140,12 +142,10 @@ export default function Login(){
             </Grid>
           </Box>
           </Grid>
-            </Box>
-
-
-            {/* หัวข้อแถบเขียน */}
+          </Box>
+          {/* หัวข้อแถบเขียน */}
             
-            <Box id="green-form"
+          <Box className="green-form"
             sx={{
                 width: 600,
                 height: 120,
@@ -154,13 +154,17 @@ export default function Login(){
                 backgroundColor : '#69F0AE',
                 borderTopLeftRadius: '20px',
                 borderTopRightRadius: '20px'
-            }}>
-                <div className="head-login">
-                    
-                    <h1>เข้าสู่ระบบ</h1>
-                    
-                </div>   
+            }}>   
             </Box>
+            
+          </Grid> 
+          
+            <div className="head-login">
+                    <h1>เข้าสู่ระบบ</h1>
+                </div>  
+                
+                
+            
             
 
             
