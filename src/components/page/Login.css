@@ -42,7 +42,7 @@
 }   
 
 /* min-width=กว้างกว่า.. */
-@media screen and (max-width: 768px){
+/* @media screen and (max-width: 768px){
     .image{
         display: none;
     }
@@ -59,4 +59,4 @@
         position: absolute;
         left: -355px;
     }
-}
+} */
