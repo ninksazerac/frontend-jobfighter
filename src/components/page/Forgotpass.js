@@ -107,9 +107,8 @@ export default function Login(){
           </Box>
 
 
-            {/* หัวข้อแถบเขียน */}
-            
-            <Box id="green-form"
+            {/* หัวข้อแถบเขียน */} 
+            <Box className="green-form"
             sx={{
                 width: 600,
                 height: 120,
@@ -117,14 +116,15 @@ export default function Login(){
                 mx: 95,
                 backgroundColor : '#69F0AE',
                 borderTopLeftRadius: '20px',
-                borderTopRightRadius: '20px'
+                borderTopRightRadius: '20px',
+                textAlign: 'center',
+                // paddingTop: 0
+                display:"flex",
+                alignItems:"center",
+                justifyContent:"center",
             }}>
-                <div className="head-forgot-pass">
-                    
                     <h1>ลืมรหัสผ่าน</h1>
-                    
-                </div>   
-            </Box>
+          </Box>
             
 
             
