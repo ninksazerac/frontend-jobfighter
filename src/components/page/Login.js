@@ -1,41 +1,48 @@
 import React from "react";
 import Box from '@mui/material/Box';
-import { Grid } from "@mui/material";
+import { Grid, makeStyles, Typography } from "@mui/material";
 import Paper from '@mui/material/Paper';
-import { Rectangle } from "@mui/icons-material";
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-  } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import Container from '@mui/material/Container';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import logo from './pics/Lovepik_com-401693242-office-girl.png'
+import logo from './pics/Lovepik_com-401693242-office-girl.png';
 import './Login.css';
-// import { useMediaQuery } from 'react-responsive';
+import { ClassNames, useTheme } from "@emotion/react";
+import { useMediaQuery } from 'react-responsive';
 
 
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const data = new FormData(event.currentTarget);
+  console.log({
+    email: data.get('email'),
+    password: data.get('password'),
+  });
+};
+
+// const useStyles = makeStyles((theme) =>({
+//   custom:{
+//     color : "#00EE00",
+//     fontSize: 30
+//   }
+// }));
+
+// const theme = createTheme({
+//   breakpoints: {
+//     values: {
+//       xs : 0,
+//       sm : 600,
+//       md: 900,
+//       lg: 1280,
+//       xl: 1920
+//     }
+//   }
+// })
 
 export default function Login(){
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-          email: data.get('email'),
-          password: data.get('password'),
-        });
-      };
-
+    // const classes = useStyles();
+    // const theme = useTheme();
+    // const matches = useMediaQuery(theme.breakpoints.down("xs"));
     return(
         // ลองใช้ mui
         <Grid className="layout">
@@ -143,8 +150,8 @@ export default function Login(){
           </Box>
           </Grid>
           </Box>
+          
           {/* หัวข้อแถบเขียน */}
-            
           <Box className="green-form"
             sx={{
                 width: 600,
@@ -153,22 +160,21 @@ export default function Login(){
                 mx: 95,
                 backgroundColor : '#69F0AE',
                 borderTopLeftRadius: '20px',
-                borderTopRightRadius: '20px'
-            }}>   
-            </Box>
+                borderTopRightRadius: '20px',
+                textAlign: 'center',
+                // paddingTop: 0
+                display:"flex",
+                alignItems:"center",
+                justifyContent:"center",
+            }}>
+                    <h1>เข้าสู่ระบบ</h1>
+          </Box>
+            
+            
             
           </Grid> 
-          
-            <div className="head-login">
-                    <h1>เข้าสู่ระบบ</h1>
-                </div>  
-                
-                
-            
-            
-
-            
+           
+       
         </Grid>
-    );
-    
+    );  
 }
