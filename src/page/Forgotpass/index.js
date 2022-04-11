@@ -155,7 +155,7 @@ export default function Forgotpass(){
                 alignItems:"center",
                 justifyContent:"center",
             }}>
-                    <Typography component="div">
+                    <Typography variant="subtitle1">
               <Box sx={{ fontWeight: 700,}}>
              ลืมรหัสผ่าน
               </Box>
