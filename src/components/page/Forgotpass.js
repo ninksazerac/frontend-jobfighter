@@ -16,20 +16,50 @@ import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
 import logo from './pics/Lovepik_com-401693242-office-girl.png'
 import './Forgotpass.css';
+import Typography from '@material-ui/core/Typography';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
-
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const data = new FormData(event.currentTarget);
+  console.log({
+    email: data.get('email'),
+    password: data.get('password'),
+  });
+};
+const notosan1=createTheme({
+  typography:{
+    subtitle1:{
+      fontSize:50,
+      fontFamily: [
+        'Noto Sans Thai',
+        'sans-serif',
+      ].join(','),
+    },
+    body1:{
+      fontSize:30,
+      fontFamily: [
+        'Noto Sans Thai',
+        'sans-serif',
+      ].join(','),
+    },
+    body2:{
+      fontSize:18,
+      fontWeight:500,
+      fontFamily: [
+        'Noto Sans Thai',
+        'sans-serif',
+      ].join(','),
+    }
+  },
+});
 
 export default function Login(){
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-          email: data.get('email'),
-          password: data.get('password'),
-        });
-      };
+    
     return(
+        
         // ลองใช้ mui
+        <ThemeProvider theme={notosan1}>
         <Grid id="layout">
 
           <Grid className="image">
@@ -68,10 +98,12 @@ export default function Login(){
                 justifyContent="center">
 
                 <Box id="form-write" onSubmit={handleSubmit} noValidate sx={{ mt: 1 ,width: 450,marginTop:4}}>
-            <div className="detail-forgot" >
-                <h3>กรุณากรอกอีเมลที่คุณลงทะเบียนไว้</h3>
-                <h3>ระบบจะส่งลิงก์ไปยังอีเมลเพื่อให้คุณตั้งรหัสผ่านใหม่</h3>
-            </div>
+            <Typography variant="body2" align="center">
+                กรุณากรอกอีเมลที่คุณลงทะเบียนไว้
+            </Typography>
+            <Typography variant="body2" align="center">
+            ระบบจะส่งลิงก์ไปยังอีเมลเพื่อให้คุณตั้งรหัสผ่านใหม่
+            </Typography>
             <TextField className="e-mail"
               margin="normal"
               // required
@@ -95,9 +127,9 @@ export default function Login(){
               variant="contained"
               sx={{ mt: 4, mb: 2 ,color: 'white'}}
             >
-            <div className="button-login">
+            <Typography variant="body1">
             ส่ง
-            </div>
+            </Typography>
             </Button>
 
 
@@ -123,12 +155,17 @@ export default function Login(){
                 alignItems:"center",
                 justifyContent:"center",
             }}>
-                    <h1>ลืมรหัสผ่าน</h1>
+                    <Typography component="div">
+              <Box sx={{ fontWeight: 700,}}>
+             ลืมรหัสผ่าน
+              </Box>
+              </Typography>
           </Box>
             
 
             
         </Grid>
+        </ThemeProvider>
     );
     
 }
