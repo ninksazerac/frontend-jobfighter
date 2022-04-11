@@ -1,8 +1,9 @@
 import React from "react";
 import Box from '@mui/material/Box';
-import { Grid, Icon } from "@mui/material";
+import { Grid } from "@mui/material";
+import { makeStyles } from "@material-ui/styles";
 import Paper from '@mui/material/Paper';
-import { Rectangle } from "@mui/icons-material";
+import { CenterFocusStrong, Rectangle } from "@mui/icons-material";
 import {
     BrowserRouter,
     Routes,
@@ -15,34 +16,79 @@ import { Stack } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import PersonIcon from '@mui/icons-material/Person';
 import BusinessIcon from '@mui/icons-material/Business';
-import logo from './pics/—Pngtree—glasses man sending message and_5478887.png'
-import './Signup-company.css';
+import logo from './pics/—Pngtree—cartoon office top view download_4440227.png'
+import './Signup-user.css';
+import Typography from '@material-ui/core/Typography';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const data = new FormData(event.currentTarget);
+  console.log({
+    email: data.get('email'),
+    password: data.get('password'),
+  });
+};
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+const theme=createTheme({
+  typography:{
+    subtitle1:{
+      fontSize:30,
+      fontFamily: [
+        'Noto Sans Thai',
+        'sans-serif',
+      ].join(','),
+    },
+    body1:{
+      fontSize:20,
+      fontFamily: [
+        'Noto Sans Thai',
+        'sans-serif',
+      ].join(','),
+    }
+  },
+});
+const useStyles = makeStyles({
+  boxuser:{
+    marginLeft:-441.5,
+    marginTop:-124,
+    width:150,
+    height:65,
+    borderTopLeftRadius:20,
+    borderTopRightRadius:20,
+    alignItems: "center",
+    backgroundColor: '#69F0AE',
+    opacity: 0.7,
 
+  },
+  boxcom:{
+    marginLeft:-280,
+    marginTop:-124,
+    width:150,
+    height:65,
+    borderTopLeftRadius:20,
+    borderTopRightRadius:20,
+    alignItems: "center",
+    backgroundColor: '#69F0AE',
+    
+    
+  }
+});
 
-export default function Login(){
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-          email: data.get('email'),
-          password: data.get('password'),
-        });
-      };
-      const Item = styled(Paper)(({ theme }) => ({
-        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-        ...theme.typography.body2,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-      }));
+export default function Signupuser(){
+    const classes = useStyles()
 
     return(
         // ลองใช้ mui
-        
+        <ThemeProvider theme={theme}>
         <Grid className="layout">
-            {/* รูปฝั่งซ้าย */}
+          {/* รูปฝั่งซ้าย */}
           <Grid className="image">
             <Box className="image"
             component={"img"}
@@ -139,9 +185,9 @@ export default function Login(){
               variant="contained"
               sx={{ mt: 2, mb: 2 ,color: 'white'}}
             >
-            <div className="button-signup">
+            <Typography variant="subtitle1">
             สมัครสมาชิก
-            </div>
+            </Typography>
             </Button>
           </Box>
           </Grid>
@@ -156,47 +202,81 @@ export default function Login(){
                 my: -101,
                 mx: 95,
                 backgroundColor : '#69F0AE',
-                
-                borderTopRightRadius: '20px'
+                borderTopRightRadius: '20px',
+                textAlign: 'center',
+                // paddingTop: 0
+                display:"flex",
+                alignItems:"center",
+                justifyContent:"center",
             }}>
-              <div className="head-signup"> 
-                    <h1>ลงทะเบียนสำหรับบริษัท</h1>
-                </div>
-                
+               
+               
+              <Typography variant="subtitle1">
+              <Box sx={{ fontWeight: 800,textAlign:"center"}}>
+             ลงทะเบียนสำหรับบริษัท
+              </Box>
+              </Typography>
+              
 
+
+
+          {/* ปุ่มด้านบน */}
+
+          {/* เปลี่ยนไปหน้าuser */}
           <Link to="/signupuser">
-          <div button className="buttonuser1">
-          
-          <div className="icon-user">
+          <Box
+          className={classes.boxuser}
+          >
+          <Button
+          className={classes.btnuser}
+          sx={{
+            borderTopLeftRadius:20,
+            borderTopRightRadius:20,
+            width:150,
+            height:65,
+            color: "black",
+          }}>
             <PersonIcon fontSize='large'/>
-            </div>
-          <div className="user">
-          นักศึกษา
-          </div>
-            </div>
+            <Typography variant="body1">
+              นักศึกษา
+              </Typography>
+          </Button>
+          </Box>  
+          </Link>      
+
+          {/* เปลี่ยนไปหน้า company */}
+          <Link to="/signupcompany">
+          <Box
+          className={classes.boxcom}
+          >
+          <Button
+          className={classes.btnuser}
+          sx={{
+            borderTopLeftRadius:20,
+            borderTopRightRadius:20,
+            width:150,
+            height:65,
+            color: "black",
+          }}>
+            <BusinessIcon fontSize='large'/>
+            <Typography variant="body1">
+              บริษัท
+              </Typography>
+          </Button>
+          </Box>  
           </Link>
 
-          <Link to="/signupcompany">
-          <div button className="buttoncompany1">
-          <div className="icon-company">
-            <BusinessIcon fontSize='large'/>
-            </div>
-          <div className="company">
-          บริษัท
-          </div>
-            </div>
-          </Link>
 
             </Box>
+          
+                  
+          
+          
             </Grid>
-            
-
-              
-            
-
-            
+          
         </Grid>
         
+        </ThemeProvider>
     );
     
 }
