@@ -1,6 +1,7 @@
 import React from "react";
 import Box from '@mui/material/Box';
-import { Grid, makeStyles, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
+import Typography from '@material-ui/core/Typography';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -9,6 +10,8 @@ import logo from './pics/Lovepik_com-401693242-office-girl.png';
 import './Login.css';
 import { ClassNames, useTheme } from "@emotion/react";
 import { useMediaQuery } from 'react-responsive';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+
 
 
 const handleSubmit = (event) => {
@@ -19,25 +22,32 @@ const handleSubmit = (event) => {
     password: data.get('password'),
   });
 };
-
-// const useStyles = makeStyles((theme) =>({
-//   custom:{
-//     color : "#00EE00",
-//     fontSize: 30
-//   }
-// }));
-
-// const theme = createTheme({
-//   breakpoints: {
-//     values: {
-//       xs : 0,
-//       sm : 600,
-//       md: 900,
-//       lg: 1280,
-//       xl: 1920
-//     }
-//   }
-// })
+const notosan1=createTheme({
+  typography:{
+    subtitle1:{
+      fontSize:50,
+      fontFamily: [
+        'Noto Sans Thai',
+        'sans-serif',
+      ].join(','),
+    },
+    body1:{
+      fontSize:30,
+      fontFamily: [
+        'Noto Sans Thai',
+        'sans-serif',
+      ].join(','),
+    },
+    body2:{
+      fontSize:18,
+      fontWeight:500,
+      fontFamily: [
+        'Noto Sans Thai',
+        'sans-serif',
+      ].join(','),
+    }
+  },
+});
 
 export default function Login(){
     // const classes = useStyles();
@@ -45,6 +55,7 @@ export default function Login(){
     // const matches = useMediaQuery(theme.breakpoints.down("xs"));
     return(
         // ลองใช้ mui
+        <ThemeProvider theme={notosan1}>
         <Grid className="layout">
 
           <Grid className="image">
@@ -122,9 +133,9 @@ export default function Login(){
               variant="contained"
               sx={{ mt: 4, mb: 2 ,color: 'white'}}
             >
-            <div className="button-login">
+            <Typography variant="body1">
             เข้าสู่ระบบ
-            </div>
+            </Typography>
             </Button>
 
 
@@ -132,18 +143,18 @@ export default function Login(){
             <Grid container justifyContent="flex-end" alignItems="flex-end">
               <Grid item >
                 <Link href="/forgotpass" style={{fontSize: "18px",color: "black"}} variant="body2" underline="hover">
-                  <div className="forgot-pass">
+                  <Typography variant="body2">
                   ลืมรหัสผ่าน?    
-                  </div>
+                  </Typography>
                 </Link>
               </Grid>
             </Grid>
             <Grid container justifyContent="flex-end" alignItems="flex-end">
               <Grid item>
                 <Link href="/signupuser" style={{fontSize: "18px",color: "black"}} variant="body2" underline="hover">
-                  <div className="sign-up-user">
+                <Typography variant="body2">
                   ลงทะเบียนสำหรับผู้ใช้ใหม่    
-                  </div>
+                </Typography>
                 </Link>
               </Grid>
             </Grid>
@@ -167,7 +178,13 @@ export default function Login(){
                 alignItems:"center",
                 justifyContent:"center",
             }}>
-                    <h1>เข้าสู่ระบบ</h1>
+              
+              <Typography variant="subtitle1">
+              <Box sx={{ fontWeight: 800,textAlign:"center"}}>
+             เข้าสู่ระบบ
+              </Box>
+              </Typography>
+              
           </Box>
             
             
@@ -176,5 +193,6 @@ export default function Login(){
            
        
         </Grid>
+        </ThemeProvider>
     );  
 }
