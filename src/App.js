@@ -17,11 +17,12 @@ function App() {
 
           {/ <Route path="/" element={<App />} /> */}
         <Route element={<Layout></Layout>}>
+          </Route>
           <Route path="/" element={<Login />} />
           <Route path="/forgotpass" element={<Forgotpass />} />
           <Route path="/Signupstudent" element={<Signupstudent />} />
           <Route path="/signupcompany" element={<Signupcompany />} />
-        </Route>
+          {/* </Route> */}
       </Routes>
     </div>
   );
