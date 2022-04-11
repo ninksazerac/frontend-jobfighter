@@ -54,7 +54,7 @@ const notosan1=createTheme({
   },
 });
 
-export default function Login(){
+export default function Forgotpass(){
     
     return(
         
