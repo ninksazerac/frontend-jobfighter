@@ -16,8 +16,8 @@ import { Stack } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import PersonIcon from '@mui/icons-material/Person';
 import BusinessIcon from '@mui/icons-material/Business';
-import logo from './pics/—Pngtree—glasses man sending message and_5478887.png'
-import './Signup-user.css';
+import logo from '../../assets/pics/—Pngtree—cartoon office top view download_4440227.png';
+import './Signup-company.css';
 import Typography from '@material-ui/core/Typography';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
@@ -56,18 +56,7 @@ const theme=createTheme({
 });
 const useStyles = makeStyles({
   boxuser:{
-    marginLeft:-500.5,
-    marginTop:-124,
-    width:150,
-    height:65,
-    borderTopLeftRadius:20,
-    borderTopRightRadius:20,
-    alignItems: "center",
-    backgroundColor: '#69F0AE',
-    
-  },
-  boxcom:{
-    marginLeft:-340,
+    marginLeft:-441.5,
     marginTop:-124,
     width:150,
     height:65,
@@ -76,6 +65,18 @@ const useStyles = makeStyles({
     alignItems: "center",
     backgroundColor: '#69F0AE',
     opacity: 0.7,
+
+  },
+  boxcom:{
+    marginLeft:-280,
+    marginTop:-124,
+    width:150,
+    height:65,
+    borderTopLeftRadius:20,
+    borderTopRightRadius:20,
+    alignItems: "center",
+    backgroundColor: '#69F0AE',
+    
     
   }
 });
@@ -212,7 +213,7 @@ export default function Signupuser(){
                
               <Typography variant="subtitle1">
               <Box sx={{ fontWeight: 800,textAlign:"center"}}>
-             ลงทะเบียนสำหรับนักศึกษาจบใหม่
+             ลงทะเบียนสำหรับบริษัท
               </Box>
               </Typography>
               
@@ -222,7 +223,7 @@ export default function Signupuser(){
           {/* ปุ่มด้านบน */}
 
           {/* เปลี่ยนไปหน้าuser */}
-          <Link to="/signupuser">
+          <Link to="/signupstudent">
           <Box
           className={classes.boxuser}
           >

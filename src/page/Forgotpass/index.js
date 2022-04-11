@@ -1,18 +1,23 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import { Grid } from "@mui/material";
-import Typography from '@material-ui/core/Typography';
 import Paper from '@mui/material/Paper';
+import { Rectangle } from "@mui/icons-material";
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+  } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import logo from './pics/Lovepik_com-401693242-office-girl.png';
-import './Login.css';
-import { ClassNames, useTheme } from "@emotion/react";
-import { useMediaQuery } from 'react-responsive';
+import Container from '@mui/material/Container';
+import logo from '../../assets/pics/Lovepik_com-401693242-office-girl.png';
+import './Forgotpass.css';
+import Typography from '@material-ui/core/Typography';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-
-
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -49,14 +54,13 @@ const notosan1=createTheme({
   },
 });
 
-export default function Login(){
-    // const classes = useStyles();
-    // const theme = useTheme();
-    // const matches = useMediaQuery(theme.breakpoints.down("xs"));
+export default function Forgotpass(){
+    
     return(
+        
         // ลองใช้ mui
         <ThemeProvider theme={notosan1}>
-        <Grid className="layout">
+        <Grid id="layout">
 
           <Grid className="image">
             <Box className="image"
@@ -67,10 +71,9 @@ export default function Login(){
             }}
             />
           </Grid>
-
+          
             {/* ฟอร์มแถบขาว */}
-            <Grid className="form1">
-            <Box className="box-form"
+            <Box className="white-form"
             sx={{
                 width: 600,
                 height: 450,
@@ -88,16 +91,21 @@ export default function Login(){
 
 
             {/* จัดรูปแบบที่จะกรอก */}
-            <Grid className="form" container
+            <Grid id="form" container
                 spacing={0}
                 direction="column"
                 alignItems="center"
                 justifyContent="center">
 
-                <Box id="form-write" onSubmit={handleSubmit} noValidate sx={{ mt: 1 ,width: 450,marginTop:5}}>
+                <Box id="form-write" onSubmit={handleSubmit} noValidate sx={{ mt: 1 ,width: 450,marginTop:4}}>
+            <Typography variant="body2" align="center">
+                กรุณากรอกอีเมลที่คุณลงทะเบียนไว้
+            </Typography>
+            <Typography variant="body2" align="center">
+            ระบบจะส่งลิงก์ไปยังอีเมลเพื่อให้คุณตั้งรหัสผ่านใหม่
+            </Typography>
             <TextField className="e-mail"
               margin="normal"
-              // ดอกจัน
               // required
               fullWidth
               id="email"
@@ -105,22 +113,8 @@ export default function Login(){
               name="email"
               autoComplete="email"
               autoFocus
-              variant="outlined"
             />
-            <TextField className="password"
-              margin="normal"
-              // ดอกจัน
-              // required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              sx={{ mt: 5}}
-              variant="outlined"
-            />
-
+            
             <Button id="button-login"
             style={{
                 borderRadius: 20,
@@ -134,36 +128,19 @@ export default function Login(){
               sx={{ mt: 4, mb: 2 ,color: 'white'}}
             >
             <Typography variant="body1">
-            เข้าสู่ระบบ
+            ส่ง
             </Typography>
             </Button>
 
 
-            {/* link 2 อันล่าง */}
-            <Grid container justifyContent="flex-end" alignItems="flex-end">
-              <Grid item >
-                <Link href="/forgotpass" style={{fontSize: "18px",color: "black"}} variant="body2" underline="hover">
-                  <Typography variant="body2">
-                  ลืมรหัสผ่าน?    
-                  </Typography>
-                </Link>
-              </Grid>
-            </Grid>
-            <Grid container justifyContent="flex-end" alignItems="flex-end">
-              <Grid item>
-                <Link href="/signupuser" style={{fontSize: "18px",color: "black"}} variant="body2" underline="hover">
-                <Typography variant="body2">
-                  ลงทะเบียนสำหรับผู้ใช้ใหม่    
-                </Typography>
-                </Link>
-              </Grid>
-            </Grid>
+            
           </Box>
           </Grid>
           </Box>
-          
-          {/* หัวข้อแถบเขียน */}
-          <Box className="green-form"
+
+
+            {/* หัวข้อแถบเขียน */} 
+            <Box className="green-form"
             sx={{
                 width: 600,
                 height: 120,
@@ -178,21 +155,17 @@ export default function Login(){
                 alignItems:"center",
                 justifyContent:"center",
             }}>
-              
-              <Typography variant="subtitle1">
-              <Box sx={{ fontWeight: 800,textAlign:"center"}}>
-             เข้าสู่ระบบ
+                    <Typography component="div">
+              <Box sx={{ fontWeight: 700,}}>
+             ลืมรหัสผ่าน
               </Box>
               </Typography>
-              
           </Box>
             
+
             
-            
-          </Grid> 
-           
-       
         </Grid>
         </ThemeProvider>
-    );  
+    );
+    
 }
