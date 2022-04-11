@@ -81,7 +81,7 @@ export default function Example() {
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
                   <div>
-                    <Menu.Button className="bg-gray-800 flex text-sm rounded-full  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-teal-400 focus:ring-teal-400" >
+                    <Menu.Button className="bg-white-800 flex text-sm rounded-full  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-teal-400 focus:ring-teal-400" >
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"

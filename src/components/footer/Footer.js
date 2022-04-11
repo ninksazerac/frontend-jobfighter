@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function FooterStudent() {
+export default function Footer() {
   return (
-    <footer className="p-4 bg-green-300 shadow md:px-6 md:py- bg-gray-800 text-decoration: none sticky top-[100vh]">
+    <footer className="p-4 bg-green-300 shadow md:px-6 md:py- dark:bg-gray-800 text-decoration: none sticky top-[100vh]">
       <div className="sm:flex sm:items-center sm:justify-between text-decoration: none">
         <h1 style={{ color: "black", textAlign: "left" }}>Jobfighter</h1>
 
@@ -26,7 +26,7 @@ export default function FooterStudent() {
       {/* รอใส่ลิงค์ไปยังหน้าค้นหา  */}
       <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
         © 2022{" "}
-        <a href="/" className="hover:underline">
+        <a href="" className="hover:underline">
           Jobfighter
         </a>
         . All Rights Reserved.
