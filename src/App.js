@@ -7,6 +7,9 @@ import Forgotpass from "./page/Forgotpass";
 import Signupstudent from "./page/Signup-student";
 import Signupcompany from "./page/Signup-company";
 import Layout from "./page/Layout";
+import Notistudent from "./page/Noti-student";
+import Applyjob from "./page/Applyjob";
+
 
 function App() {
   return (
@@ -17,11 +20,14 @@ function App() {
 
           {/ <Route path="/" element={<App />} /> */}
         <Route element={<Layout></Layout>}>
+          <Route path="/applyjob" element={<Applyjob />} />
           </Route>
+
           <Route path="/" element={<Login />} />
           <Route path="/forgotpass" element={<Forgotpass />} />
           <Route path="/Signupstudent" element={<Signupstudent />} />
           <Route path="/signupcompany" element={<Signupcompany />} />
+          <Route path="/notistudent" element={<Notistudent />} />
           {/* </Route> */}
       </Routes>
     </div>
