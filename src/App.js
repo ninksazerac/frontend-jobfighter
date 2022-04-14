@@ -9,6 +9,7 @@ import Signupcompany from "./page/Signup-company";
 import Layout from "./page/Layout";
 import Notistudent from "./page/Noti-student";
 import Applyjob from "./page/Applyjob";
+import Postjob from "./page/Postjob";
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
 
           {/ <Route path="/" element={<App />} /> */}
         <Route element={<Layout></Layout>}>
-          <Route path="/applyjob" element={<Applyjob />} />
+        {/* <Route path="/applyjob" element={<Applyjob />} /> */}
           </Route>
 
           <Route path="/" element={<Login />} />
@@ -28,6 +29,8 @@ function App() {
           <Route path="/Signupstudent" element={<Signupstudent />} />
           <Route path="/signupcompany" element={<Signupcompany />} />
           <Route path="/notistudent" element={<Notistudent />} />
+          <Route path="/applyjob" element={<Applyjob />} />
+          <Route path="/postjob" element={<Postjob />} />
           {/* </Route> */}
       </Routes>
     </div>
