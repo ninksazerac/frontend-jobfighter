@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -22,12 +22,16 @@ import 'react-toastify/dist/ReactToastify.css';
 //       }
 //     );
 //   };
+
+
+export default function Notistudent(){
+    const navigate = useNavigate();
 const noti = () => {
     toast("hi");
+    navigate("/");
     toast.success("Success");
     toast.error("Error");
 }
-export default function Notistudent(){
     return(
         <div>
         <button onClick={noti}>Notify!</button>
