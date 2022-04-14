@@ -55,7 +55,7 @@ export default function Postjob(){
             </Typography>
             
             {/* <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"/> */}
-            <textarea className="message" rows="4" class="block p-2.5 w-[1240px] ml-7 mt-2 rounded-lg ring-2 ring-black" placeholder="กรุณากรอกรายละเอียด..."></textarea>
+            <textarea className="message" rows="4" class="resize-none p-2.5 w-11/12 ml-7 mt-2 rounded-lg ring-2 ring-black" placeholder="กรุณากรอกรายละเอียด..."></textarea>
         
             {/* สวัสดิการ */}
             <div class="pt-3">
@@ -65,7 +65,7 @@ export default function Postjob(){
             </Typography>
             
             </div>
-            <textarea className="message" rows="4" class="block p-2.5 w-[1240px] ml-7 mt-2 rounded-lg ring-2 ring-black" placeholder="กรุณากรอกรายละเอียด..."></textarea>
+            <textarea className="message" rows="4" class="resize-none p-2.5 w-11/12 ml-7 mt-2 rounded-lg ring-2 ring-black" placeholder="กรุณากรอกรายละเอียด..."></textarea>
             
 
             {/* คุณสมบัติของผู้สมัคร */}
