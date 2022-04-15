@@ -3,7 +3,7 @@ import NavbarStudent from "../../components/navbar/NavbarStudent";
 import Footer from "../../components/footer/Footer";
 function Layout() {
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen">
       <NavbarStudent />
       <Outlet />
       <Footer />
