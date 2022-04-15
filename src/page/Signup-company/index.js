@@ -223,7 +223,7 @@ export default function Signupuser(){
           {/* ปุ่มด้านบน */}
 
           {/* เปลี่ยนไปหน้าuser */}
-          <Link to="/signupstudent" style={{textDecoration:'none'}}>
+          <a href="/signupstudent" class="text-decoration-none">
           <Box
           className={classes.boxuser}
           >
@@ -242,10 +242,10 @@ export default function Signupuser(){
               </Typography>
           </Button>
           </Box>  
-          </Link>      
+          </a>    
 
           {/* เปลี่ยนไปหน้า company */}
-          <Link to="/signupcompany" style={{textDecoration:'none'}}>
+          <a href="/signupcompany" class="text-decoration-none">
           <Box
           className={classes.boxcom}
           >
@@ -264,7 +264,7 @@ export default function Signupuser(){
               </Typography>
           </Button>
           </Box>  
-          </Link>
+          </a>
 
 
             </Box>
