@@ -196,13 +196,12 @@ export default function Postjob(){
             
             
             {/* สถานที่ประกอบการของบริษัท */}
-            <div className="pl-8 pt-3">
+            <div className="pl-7 pt-3">
             <Typography variant="body1">
               สถานที่ประกอบการของบริษัท
             </Typography>
+            <textarea className="message" rows="4" class="resize-none p-2.5 w-11/12 ml-6 mt-2 rounded-lg ring-2 ring-black" placeholder="กรุณากรอกรายละเอียด..."></textarea>
             </div>
-            <textarea className="message" rows="4" class="resize-none p-2.5 w-11/12 ml-7 mt-2 rounded-lg ring-2 ring-black" placeholder="กรุณากรอกรายละเอียด..."></textarea>
-
             
             <div class="flex items-center pl-8 pt-3">
             <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" class="w-4 h-4 text-black rounded ring-2 ring-gray-700 "/>
