@@ -22,7 +22,7 @@ function App() {
 
           {/ <Route path="/" element={<App />} /> */}
         <Route element={<Layout></Layout>}>
-        {/* <Route path="/applyjob" element={<Applyjob />} /> */}
+        <Route path="/applyjob" element={<Applyjob />} />
         <Route path="/postjob" element={<Postjob />} />
         <Route path="/paymentcompany" element={<Paymentcompany />} />
           </Route>
@@ -32,7 +32,7 @@ function App() {
           <Route path="/Signupstudent" element={<Signupstudent />} />
           <Route path="/signupcompany" element={<Signupcompany />} />
           <Route path="/notistudent" element={<Notistudent />} />
-          <Route path="/applyjob" element={<Applyjob />} />
+          {/* <Route path="/applyjob" element={<pplyjob />} /> */}
           {/* <Route path="/paymentcompany" element={<Paymentcompany />} /> */}
           {/* <Route path="/postjob" element={<Postjob />} /> */}
           {/* </Route> */}
