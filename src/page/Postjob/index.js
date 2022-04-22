@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from '@material-ui/core/Typography';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import "./Postjob.css";
@@ -34,6 +34,8 @@ export default function Postjob(){
           }
         },
       });
+    // const initialValues = {detailwork: "",};
+    // const [formValues, setFormValues]=useState();
     return(
       
         <ThemeProvider theme={notosan1}>
@@ -54,7 +56,9 @@ export default function Postjob(){
                 รายละเอียดงาน
             </Typography>
             {/* <label for="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"/> */}
-            <textarea className="message" rows="4" class="resize-none p-2.5 w-11/12 ml-7 mt-2 rounded-lg ring-2 ring-black" placeholder="กรุณากรอกรายละเอียด..."></textarea>
+            <textarea name="detailwork" className="message" rows="4" class="resize-none p-2.5 w-11/12 ml-7 mt-2 rounded-lg ring-2 ring-black"
+            placeholder="กรุณากรอกรายละเอียด..."
+            ></textarea>
         
             {/* สวัสดิการ */}
             <div className="pt-3">
