@@ -11,7 +11,7 @@ import Notistudent from "./page/Noti-student";
 import Applyjob from "./page/Applyjob";
 import Postjob from "./page/Postjob";
 import Paymentcompany from "./page/Paymentcompany";
-
+import Contact from "./page/Contact";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <Route path="/applyjob" element={<Applyjob />} />
         <Route path="/postjob" element={<Postjob />} />
         <Route path="/paymentcompany" element={<Paymentcompany />} />
+        <Route path="/contact" element={<Contact />} />
           </Route>
 
           <Route path="/" element={<Login />} />
