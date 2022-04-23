@@ -131,12 +131,9 @@ export default function Postjob(){
                 <Typography variant="body2">
                         ตำแหน่ง
                 </Typography>
-                <select id="countries" className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[250px] p-2.5">
-                <option>United States</option>
-                <option>Canada</option>
-                <option>France</option>
-                <option>Germany</option>
-                </select>
+                <input type="text"
+                className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[250px] p-2.5"
+                placeholder="กรุณากรอกตำแหน่ง"></input>
                 </div>
 
                 {/* เช็คใน input ใส่ได้แค่เลข */}
@@ -217,17 +214,20 @@ export default function Postjob(){
 
             </div>
 
-            <a href="/paymentcompany" class="text-decoration-none">
+            
             <div className="flex items-center justify-center">
             <button
+              href="/paymentcompany"
               class="bg-[#24AB82] drop-shadow-md font-bold text-white text-2xl rounded-xl px-6 py-2.5 mt-5 mb-4 hover:bg-[#1F795E] hover:ring-2 hover:ring-white focus:ring-2 focus:ring-white focus:outline-none "
             >
+              <a href="/paymentcompany" class="text-decoration-none text-white">
               <Typography variant="body1">
               หน้าต่อไป
               </Typography>
+              </a>
                   </button>
             </div>
-            </a>
+            
 
 
             
