@@ -110,7 +110,7 @@ export default function Paymentcompany(){
                 </div>
                 <div>
                 <Typography variant="body1">
-                        เวลาที่โอนเงิน
+                        วันที่โอนเงิน
                         </Typography>
                 </div>
                 <div>
@@ -125,15 +125,19 @@ export default function Paymentcompany(){
                 </div>
             <div class="flex flex-col space-y-7 mt-48">
             <div className="w-full h-10 bg-white rounded-lg shadow-sm text-center">
-                    <Typography variant="body1">
-                        500
-                        </Typography>
+                    <input type="text"
+                        className="text-black text-center text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-full p-2.5"
+                        placeholder="สมหญิง เหนี่ยวไกล">
+                    </input>
                         </div>
+
                     <div className="w-full h-10 bg-white rounded-lg shadow-sm text-center">
-                    <Typography variant="body1">
-                        Boost
-                        </Typography>
+                    <input type="text"
+                        className="text-black text-center text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-full p-2.5"
+                        placeholder="01/12/2022">
+                    </input>
                         </div>
+
                     <div className="h-10">
                         <input class="form-control
                         block
