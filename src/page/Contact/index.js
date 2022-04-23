@@ -90,7 +90,7 @@ const isEmpty=()=>{
                 name="full_name"
                 id="full_name"
                 className="h-10 w-full text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block mt-2 pl-3"
-                placeholder="Full name"
+                placeholder="กรุณากรอกชื่อจริง นามสกุล..."
                 onKeyUp={isEmpty}
                 
                 ></input>
@@ -106,7 +106,7 @@ const isEmpty=()=>{
                 name="email"
                 id="email"
                 className="h-10 w-full text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block mt-2 pl-3"
-                placeholder="Email"
+                placeholder="example@gmail.com"
                 onKeyUp={isEmpty}
                 
                 ></input>
