@@ -8,21 +8,30 @@ export default function Applyjob(){
   const notosan1=createTheme({
     typography:{
       subtitle1:{
-        fontSize:35,
+        fontSize:40,
+        fontWeight:700,
+        fontFamily: [
+          'Noto Sans Thai',
+          'sans-serif',
+        ].join(','),
+      },
+      subtitle2:{
+        fontSize:28,
+        fontWeight:500,
         fontFamily: [
           'Noto Sans Thai',
           'sans-serif',
         ].join(','),
       },
       body1:{
-        fontSize:30,
+        fontSize:25,
         fontFamily: [
           'Noto Sans Thai',
           'sans-serif',
         ].join(','),
       },
       body2:{
-        fontSize:18,
+        fontSize:20,
         fontWeight:500,
         fontFamily: [
           'Noto Sans Thai',
@@ -40,141 +49,175 @@ export default function Applyjob(){
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
             </svg>
         
-          <div className="flex-col space-y-5">
+          <div className="flex-col space-y-3">
             <div className="mt-4">
-              <Typography variant="body1">
+              <Typography variant="subtitle1">
                 บริษัท
               </Typography>
             </div>
             <div>
-              <Typography variant="body2">
+              <Typography variant="subtitle2">
                 วันที่โพสต์ : 
               </Typography>
             </div>
           </div>
 
           </div>
-          <div className="pl-7 pt-3">
-            <Typography variant="body1">
+          <div className="pl-7 pt-5">
+            <Typography variant="subtitle2">
                 รายละเอียดงาน
             </Typography>
-            {/* <label for="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"/> */}
-            <textarea className="message" rows="4" class="resize-none p-2.5 w-11/12 ml-7 mt-2 rounded-lg ring-2 ring-black"></textarea>
-        
-            {/* สวัสดิการ */}
-            <div className="pt-3">
+            <div>
             <Typography variant="body1">
+                xxxxxxx
+            </Typography> 
+            </div>
+
+            {/* สวัสดิการ */}
+            <div className="pt-5">
+            <Typography variant="subtitle2">
                 สวัสดิการ
             </Typography>
+            <div>
+            <Typography variant="body1">
+                xxxxxxx
+            </Typography> 
             </div>
-            <textarea className="message" rows="4" class="resize-none p-2.5 w-11/12 ml-7 mt-2 rounded-lg ring-2 ring-black"></textarea>
+            </div>
             
 
             {/* คุณสมบัติของผู้สมัคร */}
-            <div className="pt-3">
-            <Typography variant="body1">
+            <div className="pt-5">
+            <Typography variant="subtitle2">
                 คุณสมบัติของผู้สมัคร
             </Typography>
-            <div className="flex space-x-6 pt-2">
+            <div className="flex flex-col space-y-6 pt-2">
                 <div className="flex space-x-2">
-                <Typography variant="body2">
-                        มหาลัย
+                <Typography variant="body1">
+                        มหาลัย :
                 </Typography>
-                <input className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[250px] p-2.5"/>
+                <div>
+                <Typography variant="body1">
+                    xxxxxxx
+                </Typography> 
+                </div>
                 </div>
 
                 <div className="flex space-x-2">
-                <Typography variant="body2">
-                        คณะ
+                <Typography variant="body1">
+                        คณะ :
                 </Typography>
-                <input className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[250px] p-2.5"/>
+                <div>
+                <Typography variant="body1">
+                    xxxxxxx
+                </Typography> 
+                </div>
                 </div>
 
                 <div className="flex space-x-2">
-                <Typography variant="body2">
-                        สาขา
+                <Typography variant="body1">
+                        สาขา :
                 </Typography>
-                <input className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[250px] p-2.5"/>
+                <div>
+                <Typography variant="body1">
+                    xxxxxxx
+                </Typography> 
+                </div>
                 </div>
                 
               </div>
 
 
-              <div className="flex space-x-6 pt-3">
+              <div className="flex flex-col space-y-6 pt-4">
                 <div className="flex space-x-2">
-                <Typography variant="body2">
-                        ประเภทงาน
+                <Typography variant="body1">
+                        ประเภทงาน :
                 </Typography>
-                <input className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[250px] p-2.5"/>
+                <div>
+                <Typography variant="body1">
+                    xxxxxxx
+                </Typography> 
+                </div>
                 </div>
 
                 <div className="flex space-x-2">
-                <Typography variant="body2">
-                        ตำแหน่ง
+                <Typography variant="body1">
+                        ตำแหน่ง :
                 </Typography>
-                <input className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[250px] p-2.5"/>
+                <div>
+                <Typography variant="body1">
+                    xxxxxxx
+                </Typography> 
+                </div>
                 </div>
 
                 {/* เช็คใน input ใส่ได้แค่เลข */}
                 <div className="flex space-x-2">
-                <Typography variant="body2">
-                        เงินเดือน
+                <Typography variant="body1">
+                        เงินเดือน (บาท) :
                 </Typography>
-                <input type="number"
-                className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[80px] p-2.5"
-                placeholder="ต่ำสุด"></input>
-                <Typography variant="body2">
+                <div>
+                <Typography variant="body1">
+                    เงินเดือนต่ำ
+                </Typography> 
+                </div>
+                <Typography variant="body1">
                         -
                 </Typography>
-                <input type="number"
-                className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[80px] p-2.5"
-                placeholder="สูงสุด"></input>
+                <div>
+                <Typography variant="body1">
+                    เงินเดือนสูง
+                </Typography> 
+                </div>
                 </div>
                 
               </div>
             </div>
 
 
-            <div className="flex space-x-6 pt-12">
+            <div className="flex flex-col space-y-6 pt-4">
                 <div className="flex space-x-2">
-                <Typography variant="body2">
-                        อัตราที่รับ
+                <Typography variant="body1">
+                        จังหวัดของสถานประกอบการ :
                 </Typography>
-                <input type="number"
-                className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[80px] p-2.5"
-                placeholder="จำนวน"></input>
-                
+                <div>
+                <Typography variant="body1">
+                    xxxxxxx
+                </Typography> 
                 </div>
-
-                <div className="flex space-x-2">
-                <Typography variant="body2">
-                        จังหวัดของสถานประกอบการ
-                </Typography>
-                <input className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[250px] p-2.5"/>
                 </div>
 
                 {/* เช็คใน input ใส่ได้แค่เลข */}
-                <div className="flex space-x-2">
-                <Typography variant="body2">
-                        ระยะเวลาการโพสต์
-                </Typography>
-                <input className="text-black text-sm rounded-lg ring-2 ring-black focus:ring-black-500 focus:border-black-500 block w-[250px] p-2.5"/>
-                </div>
                 
               </div>
+
+              <div className="flex space-x-2 pt-3">
+                <Typography variant="body1">
+                        อัตราที่รับ :
+                </Typography>
+                <div>
+                <Typography variant="body1">
+                    xxxxxxx
+                </Typography> 
+                </div>
+                </div>
             </div>
             
             
             {/* สถานที่ประกอบการของบริษัท */}
-            <div className="pl-7 pt-3">
-            <Typography variant="body1">
+            <div className="pl-7 pt-5">
+            <Typography variant="subtitle2">
               สถานที่ประกอบการของบริษัท
             </Typography>
-            <textarea className="message" rows="4" class="resize-none p-2.5 w-11/12 ml-6 mt-2 rounded-lg ring-2 ring-black"></textarea>
+            <div>
+                <Typography variant="body1">
+                    xxxxxxx
+                </Typography> 
+                </div>
             </div>
             
             {/* Tags */}
-            <div className="pl-7 pt-3 flex space-x-4">
+            <div className="pl-7 pt-5 flex space-x-4">
             <Typography variant="body1">
               Tags : 
             </Typography>
@@ -199,7 +242,7 @@ export default function Applyjob(){
 
             <div className="pl-96 pt-5 pb-4 flex space-x-4">
             <Typography variant="body1">
-                  แนบไฟล์ Resume :  
+                  แนบไฟล์ เรซูเม่ :  
                 </Typography>
             <div className="h-10 w-80 mb-2">
                         <input class="form-control
