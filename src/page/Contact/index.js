@@ -5,7 +5,6 @@ import emailjs from '@emailjs/browser';
 import { send } from "@emailjs/browser";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ContactValidation from "./ContactValidation";
 import { useEffect } from "react";
 import { TimerOutlined } from "@mui/icons-material";
 
