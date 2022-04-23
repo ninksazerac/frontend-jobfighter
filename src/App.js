@@ -10,8 +10,9 @@ import Layout from "./page/Layout";
 import Notistudent from "./page/Noti-student";
 import Applyjob from "./page/Applyjob";
 import Postjob from "./page/Postjob";
-import Paymentcompany from "./page/Paymentcompany";
-import Contact from "./page/Contact";
+import Paymentcompany from "./page/Payment-company";
+import Contactstudent from "./page/Contact-student";
+import Contactcompany from "./page/Contact-company";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
         <Route path="/applyjob" element={<Applyjob />} />
         <Route path="/postjob" element={<Postjob />} />
         <Route path="/paymentcompany" element={<Paymentcompany />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contactstudent" element={<Contactstudent />} />
+        <Route path="/contactcompany" element={<Contactcompany />} />
           </Route>
 
           <Route path="/" element={<Login />} />
