@@ -13,6 +13,7 @@ import Postjob from "./page/Postjob";
 import Paymentcompany from "./page/Payment-company";
 import Contactstudent from "./page/Contact-student";
 import Contactcompany from "./page/Contact-company";
+import Editpost from "./page/Editpost";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/paymentcompany" element={<Paymentcompany />} />
         <Route path="/contactstudent" element={<Contactstudent />} />
         <Route path="/contactcompany" element={<Contactcompany />} />
+        <Route path="/editpost" element={<Editpost />} />
           </Route>
 
           <Route path="/" element={<Login />} />
